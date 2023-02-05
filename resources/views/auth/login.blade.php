@@ -25,7 +25,7 @@
                                     </span>
                                     @enderror
                                 </div>
-                                <div class="input-group mb-4">
+                                <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <svg class="icon">
                                     <use xlink:href="{{asset('admin/coreui/vendors/@coreui/icons/svg/free.svg#cil-lock-locked')}}"></use>
@@ -37,6 +37,14 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <label class="form-check mb-0">
+                                            <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                            <span class="form-check-label" for="remember">{{__('Remember Me')}}</span>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
